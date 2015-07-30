@@ -7,15 +7,43 @@
     <header>
       <h1>Todo List</h1>
     </header>
+
+    <form class="new-task">
+    	<input type="text" name="text" placeholder="Type to add new tasks" />
+    </form>
  
     <ul>
       {{#each tasks}}
         {{> task}}
       {{/each}}
     </ul>
+
+    <header>
+      <h1>Complete List</h1>
+    </header>
+
+    <ul>
+      {{#each completeTasks}}
+        {{> compTask}}
+      {{/each}}
+    </ul>
   </div>
 </body>
  
 <template name="task">
-  <li>{{text}}</li>
+  <li class="{{#if checked}}checked{{/if}}">
+    <button class="delete">&times;</button>
+ 
+    <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+ 
+    <span class="text">{{text}}</span>
+  </li>
+</template>
+
+<template name="compTask">
+  <li>
+    <button class="delete">&times;</button>
+
+    <span class="text">{{text}}</span>
+  </li>
 </template>

@@ -57,6 +57,7 @@ form {
   width: 100%;
   padding-right: 80px;
   font-size: 1em;
+  margin-bottom: 10px;
 }
 
 .new-task input:focus{
@@ -69,7 +70,7 @@ ul {
   background: white;
 }
 
-.delete {
+.delete{
   float: right;
   font-weight: bold;
   background: none;
