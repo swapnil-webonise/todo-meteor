@@ -12,8 +12,8 @@ A todo list with meteor
 
     ```
     meteor
-    ```
-4) Open mongo console using:
+    ```    
+4. Open mongo console using:
 
     ```
     meteor mongo
